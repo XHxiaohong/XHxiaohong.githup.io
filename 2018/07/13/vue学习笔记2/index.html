@@ -96,17 +96,17 @@
 
 
 
-  <meta name="description" content="前言&amp;emsp;&amp;emsp;之前写了一篇关于vue项目的搭建，个人感觉其实并没有什么实质性的内容，都是一些简单的命令行操作。这一篇将会讲解一些的vue基础知识，算是初步入门了吧。 目录1.声明式渲染 2.数据双向绑定&amp;nbsp;&amp;emsp;2.1双向绑定的概念&amp;nbsp;&amp;emsp;2.2双向绑定的实现原理&amp;nbsp;&amp;emsp;2.3双向绑定的案列 3.vue开发常用指令介绍&amp;nbsp;&amp;ems">
+  <meta name="description" content="前言&amp;emsp;&amp;emsp;之前写了一篇关于vue项目的搭建，个人感觉其实并没有什么实质性的内容，都是一些简单的命令行操作。这一篇将会讲解一些的vue基础知识，算是初步入门了吧。 声明式渲染&amp;emsp;&amp;emsp;Vue允许采用简洁的模板语法来声明式地将数据渲染进 DOM 的系统&amp;emsp;&amp;emsp;因为vue采用的是数据双向绑定，所以改变message的值DOM也会发生改变，所以也称为响应式元">
 <meta property="og:type" content="article">
 <meta property="og:title" content="vue学习笔记二">
 <meta property="og:url" content="https://xhxiaohong.github.io/XHxiaohong.githup.io/2018/07/13/vue学习笔记2/index.html">
 <meta property="og:site_name" content="潇潇的微博">
-<meta property="og:description" content="前言&amp;emsp;&amp;emsp;之前写了一篇关于vue项目的搭建，个人感觉其实并没有什么实质性的内容，都是一些简单的命令行操作。这一篇将会讲解一些的vue基础知识，算是初步入门了吧。 目录1.声明式渲染 2.数据双向绑定&amp;nbsp;&amp;emsp;2.1双向绑定的概念&amp;nbsp;&amp;emsp;2.2双向绑定的实现原理&amp;nbsp;&amp;emsp;2.3双向绑定的案列 3.vue开发常用指令介绍&amp;nbsp;&amp;ems">
+<meta property="og:description" content="前言&amp;emsp;&amp;emsp;之前写了一篇关于vue项目的搭建，个人感觉其实并没有什么实质性的内容，都是一些简单的命令行操作。这一篇将会讲解一些的vue基础知识，算是初步入门了吧。 声明式渲染&amp;emsp;&amp;emsp;Vue允许采用简洁的模板语法来声明式地将数据渲染进 DOM 的系统&amp;emsp;&amp;emsp;因为vue采用的是数据双向绑定，所以改变message的值DOM也会发生改变，所以也称为响应式元">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-06-03T07:44:11.351Z">
+<meta property="og:updated_time" content="2019-06-03T09:47:17.248Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="vue学习笔记二">
-<meta name="twitter:description" content="前言&amp;emsp;&amp;emsp;之前写了一篇关于vue项目的搭建，个人感觉其实并没有什么实质性的内容，都是一些简单的命令行操作。这一篇将会讲解一些的vue基础知识，算是初步入门了吧。 目录1.声明式渲染 2.数据双向绑定&amp;nbsp;&amp;emsp;2.1双向绑定的概念&amp;nbsp;&amp;emsp;2.2双向绑定的实现原理&amp;nbsp;&amp;emsp;2.3双向绑定的案列 3.vue开发常用指令介绍&amp;nbsp;&amp;ems">
+<meta name="twitter:description" content="前言&amp;emsp;&amp;emsp;之前写了一篇关于vue项目的搭建，个人感觉其实并没有什么实质性的内容，都是一些简单的命令行操作。这一篇将会讲解一些的vue基础知识，算是初步入门了吧。 声明式渲染&amp;emsp;&amp;emsp;Vue允许采用简洁的模板语法来声明式地将数据渲染进 DOM 的系统&amp;emsp;&amp;emsp;因为vue采用的是数据双向绑定，所以改变message的值DOM也会发生改变，所以也称为响应式元">
 
 
 
@@ -349,7 +349,7 @@
                 
                   <span class="post-meta-item-text">Bearbeitet am</span>
                 
-                <time title="Geändert am: 2019-06-03 15:44:11" itemprop="dateModified" datetime="2019-06-03T15:44:11+08:00">2019-06-03</time>
+                <time title="Geändert am: 2019-06-03 17:47:17" itemprop="dateModified" datetime="2019-06-03T17:47:17+08:00">2019-06-03</time>
               
             
           </span>
@@ -384,11 +384,6 @@
 
       
         <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp;之前写了一篇关于vue项目的搭建，个人感觉其实并没有什么实质性的内容，都是一些简单的命令行操作。这一篇将会讲解一些的vue基础知识，算是初步入门了吧。</p>
-<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>1.声明式渲染</p>
-<p>2.数据双向绑定<br>&nbsp;&emsp;2.1双向绑定的概念<br>&nbsp;&emsp;2.2双向绑定的实现原理<br>&nbsp;&emsp;2.3双向绑定的案列</p>
-<p>3.vue开发常用指令介绍<br>&nbsp;&emsp; 3.1 v-if条件渲染<br>&nbsp;&emsp; 3.2 v-for循环<br>&nbsp;&emsp; 3.3 v-on 事件监听器<br>&nbsp;&emsp; 3.4 v-bind 属性绑定<br>&nbsp;&emsp; 3.5 v-model 表单输入绑定<br>&nbsp;&emsp; 3.6 v-show 显示隐藏</p>
-<p>4.组件开发<br>&nbsp;&emsp; 4.1 组件基础<br>&nbsp;&emsp; 4.2 组件通讯<br>&nbsp;&emsp; 4.3 递归组件</p>
-<a id="more"></a>
 <h2 id="声明式渲染"><a href="#声明式渲染" class="headerlink" title="声明式渲染"></a>声明式渲染</h2><p>&emsp;&emsp;Vue允许采用简洁的模板语法来<strong>声明式</strong>地将数据渲染进 DOM 的系统<br>&emsp;&emsp;因为vue采用的是数据双向绑定，所以改变message的值DOM也会发生改变，所以也称为<strong>响应式元素</strong></p>
 <pre><code>html 部分
 &lt;div id=&quot;app&quot;&gt;
@@ -416,7 +411,7 @@ var app = new Vue({
   data: {
     message: &apos;Hello Vue!&apos;
   }
-})</code></pre><p>&emsp;&emsp;我把vue的双向绑定分为三个步骤：<br>&emsp;&emsp;&emsp;&emsp;第一步：页面数据和数据层数据保持一致。即界面上p标签和input标签里展示的数据和js代码里的message属性的数据一致。这一步很好完成，使<br>&emsp;&emsp;用js代码将数据渲染到页面就可以了;<br>&emsp;&emsp;&emsp;&emsp;第二步：页面数据发生改变时数据层数据和界面数据要保持一致。即在input输入框里输入新数据时，js里的message属性和界面p标签里的数据也<br>&emsp;&emsp;要发生改变，且变化要与input输入框里的数据保持一致。这一步也比较简单，使用js代码监听input事件，获取到input表签里的数据，再通过js把获取<br>&emsp;&emsp;到的数据赋值给message属性，并渲染到界面的p标签中;<br>&emsp;&emsp;&emsp;&emsp;第三步：数据层数据发生改变时，界面数据要和数据层数据要保持一致。即js里的message属性发生改变时，界面p标签和input标签里的数据也要<br>&emsp;&emsp;发生相同的改变。在这里vue 采用了订阅者模式监听message属性，当message属性发生改变时，js代码将改变后的数据渲染带页面。</p>
+})</code></pre><p>‘    ‘我把vue的双向绑定分为三个步骤：<br>‘        ‘第一步：页面数据和数据层数据保持一致。即界面上p标签和input标签里展示的数据和js代码里的message属性的数据一致。这一步很好完成，使<br>&emsp;&emsp;用js代码将数据渲染到页面就可以了;<br>&emsp;&emsp;&emsp;&emsp;第二步：页面数据发生改变时数据层数据和界面数据要保持一致。即在input输入框里输入新数据时，js里的message属性和界面p标签里的数据也<br>&emsp;&emsp;要发生改变，且变化要与input输入框里的数据保持一致。这一步也比较简单，使用js代码监听input事件，获取到input表签里的数据，再通过js把获取<br>&emsp;&emsp;到的数据赋值给message属性，并渲染到界面的p标签中;<br>&emsp;&emsp;&emsp;&emsp;第三步：数据层数据发生改变时，界面数据要和数据层数据要保持一致。即js里的message属性发生改变时，界面p标签和input标签里的数据也要<br>&emsp;&emsp;发生相同的改变。在这里vue 采用了订阅者模式监听message属性，当message属性发生改变时，js代码将改变后的数据渲染带页面。</p>
 <h4 id="3-双向绑定的案列"><a href="#3-双向绑定的案列" class="headerlink" title="3. 双向绑定的案列"></a>3. 双向绑定的案列</h4><pre><code>&lt;input type=&quot;txt&quot; id=&quot;a&quot;&gt;
 &lt;p id=&quot;b&quot;&gt;&lt;/p&gt;
 
@@ -428,7 +423,12 @@ var app = new Vue({
           document.getElementById(&apos;a&apos;).value = newVal
           document.getElementById(&apos;b&apos;).innerHTML = newVal
       }
-  })</code></pre><p>  document.addEventListener(“keyup”, function (e) {<br>    obj.message = e.target.value;<br>  })<br>    <br>&emsp;&emsp; 这是我写的一个简单版本的数据双向绑定案例，实现了在input里输入数据，p标签会显示相同的内容，同时控制台也会打印出修改后obj.message。这样就实现了 model =&gt; view 以及 view =&gt; model 的双向绑定。</p>
+  })
+
+document.addEventListener(&quot;keyup&quot;, function (e) {
+  obj.message = e.target.value;
+})
+&lt;/script&gt;</code></pre><p>&emsp;&emsp; 这是我写的一个简单版本的数据双向绑定案例，实现了在input里输入数据，p标签会显示相同的内容，同时控制台也会打印出修改后obj.message。这样就实现了 model =&gt; view 以及 view =&gt; model 的双向绑定。</p>
 <h2 id="vue开发常用指令介绍"><a href="#vue开发常用指令介绍" class="headerlink" title="vue开发常用指令介绍"></a>vue开发常用指令介绍</h2><p>&emsp; 指令用来扩展HTML功能，将js代码添加到html上，从而大大的减少了代码量。vue内置了很多指令，详情见<a href="https://cn.vuejs.org/v2/guide/conditional.html" target="_blank" rel="noopener">vue官方文档</a>。</p>
 <h4 id="1-v-if条件渲染"><a href="#1-v-if条件渲染" class="headerlink" title="1. v-if条件渲染"></a>1. v-if条件渲染</h4><p>&emsp;当判断条件成立时，显示h1标签里的内容，不成立时，则h1标签隐藏</p>
 <pre><code>html 部分
@@ -819,7 +819,7 @@ var app = new Vue({
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#目录"><span class="nav-number">2.</span> <span class="nav-text">目录</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声明式渲染"><span class="nav-number">3.</span> <span class="nav-text">声明式渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据双向绑定"><span class="nav-number">4.</span> <span class="nav-text">数据双向绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-双向绑定的概念"><span class="nav-number">4.0.1.</span> <span class="nav-text">1. 双向绑定的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-双向绑定的实现原理"><span class="nav-number">4.0.2.</span> <span class="nav-text">2. 双向绑定的实现原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-双向绑定的案列"><span class="nav-number">4.0.3.</span> <span class="nav-text">3. 双向绑定的案列</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#vue开发常用指令介绍"><span class="nav-number">5.</span> <span class="nav-text">vue开发常用指令介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-v-if条件渲染"><span class="nav-number">5.0.1.</span> <span class="nav-text">1. v-if条件渲染</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-v-for循环"><span class="nav-number">5.0.2.</span> <span class="nav-text">2. v-for循环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-v-on-事件监听器"><span class="nav-number">5.0.3.</span> <span class="nav-text">3. v-on 事件监听器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#v-on指令的一些扩展"><span class="nav-number">5.0.3.1.</span> <span class="nav-text">v-on指令的一些扩展</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-v-bind-属性绑定"><span class="nav-number">5.0.4.</span> <span class="nav-text">4. v-bind 属性绑定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-v-model-表单输入绑定"><span class="nav-number">5.0.5.</span> <span class="nav-text">5.v-model 表单输入绑定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-v-show-显示隐藏"><span class="nav-number">5.0.6.</span> <span class="nav-text">6.v-show 显示隐藏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件开发"><span class="nav-number">6.</span> <span class="nav-text">组件开发</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-组件基础"><span class="nav-number">6.0.1.</span> <span class="nav-text">1.组件基础</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-组件注册"><span class="nav-number">6.0.1.1.</span> <span class="nav-text">1.1 组件注册</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-组件的复用"><span class="nav-number">6.0.1.2.</span> <span class="nav-text">1.2 组件的复用</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-组件间的通讯"><span class="nav-number">6.0.2.</span> <span class="nav-text">2. 组件间的通讯</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-父组件向子组件传递数据"><span class="nav-number">6.0.2.1.</span> <span class="nav-text">2.1 父组件向子组件传递数据</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-子组件向父组件传递信息"><span class="nav-number">6.0.3.</span> <span class="nav-text">2.2 子组件向父组件传递信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-递归组件"><span class="nav-number">6.0.4.</span> <span class="nav-text">3. 递归组件</span></a></li></ol></li></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前言"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#声明式渲染"><span class="nav-number">2.</span> <span class="nav-text">声明式渲染</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据双向绑定"><span class="nav-number">3.</span> <span class="nav-text">数据双向绑定</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-双向绑定的概念"><span class="nav-number">3.0.1.</span> <span class="nav-text">1. 双向绑定的概念</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-双向绑定的实现原理"><span class="nav-number">3.0.2.</span> <span class="nav-text">2. 双向绑定的实现原理</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-双向绑定的案列"><span class="nav-number">3.0.3.</span> <span class="nav-text">3. 双向绑定的案列</span></a></li></ol></li></ol><li class="nav-item nav-level-2"><a class="nav-link" href="#vue开发常用指令介绍"><span class="nav-number">4.</span> <span class="nav-text">vue开发常用指令介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-v-if条件渲染"><span class="nav-number">4.0.1.</span> <span class="nav-text">1. v-if条件渲染</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-v-for循环"><span class="nav-number">4.0.2.</span> <span class="nav-text">2. v-for循环</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-v-on-事件监听器"><span class="nav-number">4.0.3.</span> <span class="nav-text">3. v-on 事件监听器</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#v-on指令的一些扩展"><span class="nav-number">4.0.3.1.</span> <span class="nav-text">v-on指令的一些扩展</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-v-bind-属性绑定"><span class="nav-number">4.0.4.</span> <span class="nav-text">4. v-bind 属性绑定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#5-v-model-表单输入绑定"><span class="nav-number">4.0.5.</span> <span class="nav-text">5.v-model 表单输入绑定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#6-v-show-显示隐藏"><span class="nav-number">4.0.6.</span> <span class="nav-text">6.v-show 显示隐藏</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#组件开发"><span class="nav-number">5.</span> <span class="nav-text">组件开发</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-组件基础"><span class="nav-number">5.0.1.</span> <span class="nav-text">1.组件基础</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#1-1-组件注册"><span class="nav-number">5.0.1.1.</span> <span class="nav-text">1.1 组件注册</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#1-2-组件的复用"><span class="nav-number">5.0.1.2.</span> <span class="nav-text">1.2 组件的复用</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-组件间的通讯"><span class="nav-number">5.0.2.</span> <span class="nav-text">2. 组件间的通讯</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#2-1-父组件向子组件传递数据"><span class="nav-number">5.0.2.1.</span> <span class="nav-text">2.1 父组件向子组件传递数据</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-子组件向父组件传递信息"><span class="nav-number">5.0.3.</span> <span class="nav-text">2.2 子组件向父组件传递信息</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-递归组件"><span class="nav-number">5.0.4.</span> <span class="nav-text">3. 递归组件</span></a></li></ol></li></div>
             
 
           </div>
