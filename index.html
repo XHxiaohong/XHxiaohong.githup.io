@@ -192,7 +192,7 @@
   </div>
 
   <div class="site-nav-toggle">
-    <button aria-label="Cambiar a barra de navegación">
+    <button aria-label="Navigationsleiste an/ausschalten">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -220,7 +220,7 @@
 
     
 
-    <a href="/XHxiaohong.githup.io/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Inicio</a>
+    <a href="/XHxiaohong.githup.io/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>Startseite</a>
 
   </li>
         
@@ -237,7 +237,7 @@
 
     
 
-    <a href="/XHxiaohong.githup.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archivo</a>
+    <a href="/XHxiaohong.githup.io/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>Archiv</a>
 
   </li>
 
@@ -327,14 +327,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Publicado el</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Creado por: 2019-06-03 16:02:06 / Modificado por: 16:31:44" itemprop="dateCreated datePublished" datetime="2019-06-03T16:02:06+08:00">2019-06-03</time>
+              <time title="Erstellt: 2019-06-03 16:02:06 / Geändert am: 16:31:44" itemprop="dateCreated datePublished" datetime="2019-06-03T16:02:06+08:00">2019-06-03</time>
             
 
             
@@ -469,14 +469,14 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               
-                <span class="post-meta-item-text">Publicado el</span>
+                <span class="post-meta-item-text">Veröffentlicht am</span>
               
 
               
                 
               
 
-              <time title="Creado por: 2019-06-03 15:46:50 / Modificado por: 17:08:11" itemprop="dateCreated datePublished" datetime="2019-06-03T15:46:50+08:00">2019-06-03</time>
+              <time title="Erstellt: 2019-06-03 15:46:50 / Geändert am: 17:08:11" itemprop="dateCreated datePublished" datetime="2019-06-03T15:46:50+08:00">2019-06-03</time>
             
 
             
@@ -571,6 +571,346 @@
 
 
     
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xhxiaohong.github.io/XHxiaohong.githup.io/XHxiaohong.githup.io/2018/12/03/vue学习笔记3/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="潇潇">
+      <meta itemprop="description" content="安安静静的叶 随风飘落">
+      <meta itemprop="image" content="/XHxiaohong.githup.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="潇潇的微博">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/XHxiaohong.githup.io/2018/12/03/vue学习笔记3/" class="post-title-link" itemprop="url">vue学习笔记三</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2018-12-03 15:30:00 / Geändert am: 16:41:03" itemprop="dateCreated datePublished" datetime="2018-12-03T15:30:00+08:00">2018-12-03</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp; 最近一直没有动手写博客，一个是没有时间，另一个是感觉到了个人的不足，今天动手写这篇微博，一个完成vue系列的学习笔记，另一个是温习一下vue。</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><ol>
+<li>深入组件<br> 1.1 插槽<br> 1.2 动态组件与异步组件</li>
+<li>复用<br> 2.1 自定义指令<br> 2.2 插件<br> 2.3 过滤器</li>
+<li>路由<br> 3.1 路由文件配置<br> 3.2 导航守卫</li>
+</ol>
+<h2 id="深入组件"><a href="#深入组件" class="headerlink" title="深入组件"></a>深入组件</h2><pre><code>在上一篇中，我们已经接触到了组件，对于组件的应用有了初步的了解，而在一些复杂的场景，单单基础的组件很难满足需求，在这里将会对这类情况进行解决。</code></pre><h3 id="1-1-插槽"><a href="#1-1-插槽" class="headerlink" title="1.1 插槽"></a>1.1 插槽</h3><p>&emsp; <strong>组件</strong> 主要是将相同的功能提出来进行封装，在现实应用场景中，不同的页面上功能更多的是相似而不是完全相同，这种情况，单单用组件就无法满足需求了，如果用上插槽就可以完美的解决这类问题。</p>
+<pre><code>&lt;div class=&quot;container&quot;&gt;
+    &lt;header&gt;
+        &lt;slot name=&quot;header&quot;&gt;&lt;/slot&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;slot&gt;&lt;/slot&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+        &lt;slot name=&quot;footer&quot;&gt;&lt;/slot&gt;
+    &lt;/footer&gt;
+&lt;/div&gt;
+
+引用组件
+
+&lt;base-layout&gt;
+    &lt;h1 slot=&quot;header&quot;&gt;Here might be a page title&lt;/h1&gt;
+    &lt;p&gt;A paragraph for the main content.&lt;/p&gt;
+    &lt;p&gt;And another one.&lt;/p&gt;
+    &lt;p slot=&quot;footer&quot;&gt;Here&apos;s some contact info&lt;/p&gt;
+&lt;/base-layout&gt;</code></pre>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/XHxiaohong.githup.io/2018/12/03/vue学习笔记3/#more" rel="contents">
+                Weiterlesen &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://xhxiaohong.github.io/XHxiaohong.githup.io/XHxiaohong.githup.io/2018/07/13/vue学习笔记2/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="潇潇">
+      <meta itemprop="description" content="安安静静的叶 随风飘落">
+      <meta itemprop="image" content="/XHxiaohong.githup.io/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="潇潇的微博">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                
+                <a href="/XHxiaohong.githup.io/2018/07/13/vue学习笔记2/" class="post-title-link" itemprop="url">vue学习笔记二</a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Veröffentlicht am</span>
+              
+
+              
+                
+              
+
+              <time title="Erstellt: 2018-07-13 17:37:11" itemprop="dateCreated datePublished" datetime="2018-07-13T17:37:11+08:00">2018-07-13</time>
+            
+
+            
+              
+
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">Bearbeitet am</span>
+                
+                <time title="Geändert am: 2019-06-03 15:44:11" itemprop="dateModified" datetime="2019-06-03T15:44:11+08:00">2019-06-03</time>
+              
+            
+          </span>
+
+          
+
+          
+            
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>&emsp;&emsp;之前写了一篇关于vue项目的搭建，个人感觉其实并没有什么实质性的内容，都是一些简单的命令行操作。这一篇将会讲解一些的vue基础知识，算是初步入门了吧。</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="目录"></a>目录</h2><p>1.声明式渲染</p>
+<p>2.数据双向绑定<br>&nbsp;&emsp;2.1双向绑定的概念<br>&nbsp;&emsp;2.2双向绑定的实现原理<br>&nbsp;&emsp;2.3双向绑定的案列</p>
+<p>3.vue开发常用指令介绍<br>&nbsp;&emsp; 3.1 v-if条件渲染<br>&nbsp;&emsp; 3.2 v-for循环<br>&nbsp;&emsp; 3.3 v-on 事件监听器<br>&nbsp;&emsp; 3.4 v-bind 属性绑定<br>&nbsp;&emsp; 3.5 v-model 表单输入绑定<br>&nbsp;&emsp; 3.6 v-show 显示隐藏</p>
+<p>4.组件开发<br>&nbsp;&emsp; 4.1 组件基础<br>&nbsp;&emsp; 4.2 组件通讯<br>&nbsp;&emsp; 4.3 递归组件</p>
+          <!--noindex-->
+          
+            <div class="post-button text-center">
+              <a class="btn" href="/XHxiaohong.githup.io/2018/07/13/vue学习笔记2/#more" rel="contents">
+                Weiterlesen &raquo;
+              </a>
+            </div>
+          
+          <!--/noindex-->
+        
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
   </section>
 
   
@@ -613,8 +953,8 @@
                 
                   <a href="/XHxiaohong.githup.io/archives/">
                 
-                    <span class="site-state-item-count">2</span>
-                    <span class="site-state-item-name">entradas</span>
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">Artikel</span>
                   </a>
                 </div>
               
@@ -671,7 +1011,7 @@
 </div>
 
 
-  <div class="powered-by">Creado mediante <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
+  <div class="powered-by">Erstellt mit  <a href="https://hexo.io" class="theme-link" rel="noopener" target="_blank">Hexo</a> v3.8.0</div>
 
 
 
@@ -679,7 +1019,7 @@
 
 
 
-  <div class="theme-info">Tema – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.2</div>
+  <div class="theme-info">Design – <a href="https://theme-next.org" class="theme-link" rel="noopener" target="_blank">NexT.Gemini</a> v7.1.2</div>
 
 
 
